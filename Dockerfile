@@ -27,14 +27,14 @@ COPY --from=builder /cmd/derodpkg .
 # REST interface
 #EXPOSE 8080
 
-# P2P network (mainnet, testnet & regnet respectively)
-#EXPOSE 8333 18333 18444
+# P2P network (mainnet, testnet)
+#EXPOSE 10101 40401
 
-# RPC interface (mainnet, testnet & regnet respectively)
-#EXPOSE 8332 18332 18443
+# RPC interface (mainnet, testnet)
+#EXPOSE 10102 40402
 
-# ZMQ ports (for transactions & blocks respectively)
-# EXPOSE 28332 28333
+# Wallet RPC (mainnet, testnet) 
+# EXPOSE 10103 40403
 
 #Startapp
 CMD ["./derodpkg"]
